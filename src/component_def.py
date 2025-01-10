@@ -55,12 +55,13 @@ class Cell():
         self.right_wall = True
         self.bottom_wall = True
         self.top_wall = True
+        self.visited = False
 
         self.__win = window
         self.__x1 = x
         self.__y1 = y
         self.__x2 = x + width
-        self.__y2 = x + height
+        self.__y2 = y + height
 
     def draw_move(self, to_cell, undo=False):
         center_x1 = self.__x1 + ((self.__x2 - self.__x1) / 2)
