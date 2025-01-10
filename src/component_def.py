@@ -77,19 +77,34 @@ class Cell():
         )
 
     def draw(self):
-        if self.left_wall:
-            self.__win.draw_line(
-                Line(Point(self.__x1, self.__y1), Point(self.__x1, self.__y2))
-            )
-        if self.right_wall:
-            self.__win.draw_line(
-                Line(Point(self.__x2, self.__y1), Point(self.__x2, self.__y2))
-            )
-        if self.top_wall:
-            self.__win.draw_line(
-                Line(Point(self.__x1, self.__y1), Point(self.__x2, self.__y1))
-            )
-        if self.bottom_wall:
-            self.__win.draw_line(
-                Line(Point(self.__x1, self.__y2), Point(self.__x2, self.__y2))
-            )
+        if not self.left_wall:
+            color = 'white'
+        else: 
+            color = 'black'
+        self.__win.draw_line(
+            Line(Point(self.__x1, self.__y1), Point(self.__x1, self.__y2), color=color)
+        )
+
+        if not self.right_wall:
+            color = 'white'
+        else: 
+            color = 'black'
+        self.__win.draw_line(
+            Line(Point(self.__x2, self.__y1), Point(self.__x2, self.__y2), color=color)
+        )
+
+        if not self.top_wall:
+            color = 'white'
+        else: 
+            color = 'black'
+        self.__win.draw_line(
+            Line(Point(self.__x1, self.__y1), Point(self.__x2, self.__y1), color=color)
+        )
+
+        if not self.bottom_wall:
+            color = 'white'
+        else: 
+            color = 'black'
+        self.__win.draw_line(
+            Line(Point(self.__x1, self.__y2), Point(self.__x2, self.__y2), color=color)
+        )
