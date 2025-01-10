@@ -9,7 +9,7 @@ class Maze:
         self.startx = x1
         self.starty = y1
         self.num_rows = num_rows
-        self.num_cols = num_cols - 1
+        self.num_cols = num_cols
         self.cell_size_x = cell_size_x
         self.cell_size_y = cell_size_y
         self.win = win
